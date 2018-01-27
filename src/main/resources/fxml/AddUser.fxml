@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerAddUser">
+   <children>
+      <Button fx:id="dodaj" layoutX="197.0" layoutY="337.0" mnemonicParsing="false" onAction="#DodajUzytkownika" text="Dodaj" />
+      <TextField fx:id="ADDUImie" layoutX="198.0" layoutY="69.0" promptText="Imie" />
+      <TextField fx:id="ADDUNazwisko" layoutX="198.0" layoutY="103.0" promptText="Nazwisko" />
+      <TextField fx:id="ADDULogin" layoutX="198.0" layoutY="153.0" promptText="Login" />
+      <Button fx:id="powrot" layoutX="199.0" layoutY="370.0" mnemonicParsing="false" onAction="#Powrót" text="Wróć" />
+      <Label layoutX="142.0" layoutY="14.0" text="Panel dodawania Uzytkowników" />
+      <ChoiceBox fx:id="ChoiceBoxPoziomKonta" layoutX="197.0" layoutY="291.0" prefWidth="150.0" />
+      <Label layoutX="35.0" layoutY="71.0" text="Imie">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="105.0" text="Nazwisko">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="155.0" text="Login*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="205.0" text="Email*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="246.0" text="Hasło*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="293.0" text="PoziomKonta*">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ADDUEmail" layoutX="198.0" layoutY="203.0" promptText="Email" />
+      <TextField fx:id="ADDUHaslo" layoutX="198.0" layoutY="244.0" promptText="Haslo" />
+      <Label layoutX="167.0" layoutY="396.0" text="Parametry oznaczone gwiazdką * są obowiązkowe!" />
+   </children>
+</Pane>

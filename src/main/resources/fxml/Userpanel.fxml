@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="userpanelpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1047.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserpanelController">
+   <children>
+      <TabPane fx:id="tabpane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="1047.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Informacje o tobie">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="loginuzytkownika" layoutX="351.0" layoutY="14.0" prefHeight="87.0" prefWidth="486.0" text="Label">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblid" layoutX="351.0" layoutY="142.0" prefHeight="77.0" prefWidth="422.0" text="Label">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Użytkownicy">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="TableUzytkownicy" prefHeight="482.0" prefWidth="835.0">
+                          <columns>
+                            <TableColumn fx:id="ColumnIDUz" prefWidth="42.0" text="ID" />
+                            <TableColumn fx:id="ColumnUsername" prefWidth="274.0" text="Username" />
+                              <TableColumn fx:id="ColumnPasswordUz" minWidth="0.0" prefWidth="250.0" text="Hasło" />
+                              <TableColumn fx:id="ColumnPoziom" prefWidth="268.0" text="Poziom Konta" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="WyswietlUzBTN" layoutX="844.0" layoutY="144.0" mnemonicParsing="false" onAction="#WyswietlUzytkownikow" prefHeight="25.0" prefWidth="177.0" text="Wyswietl" />
+                        <Button fx:id="EdytujUzBTN" layoutX="844.0" layoutY="183.0" mnemonicParsing="false" onAction="#doEdycjiUzytkownika" prefHeight="25.0" prefWidth="177.0" text="Edytuj" />
+                        <Button fx:id="UsunUzBTN" layoutX="844.0" layoutY="265.0" mnemonicParsing="false" onAction="#UsunUzytkownika" prefHeight="25.0" prefWidth="177.0" text="Usun" />
+                        <Button fx:id="DodajUzBTN1" layoutX="844.0" layoutY="229.0" mnemonicParsing="false" onAction="#DoDodaniaUzytkownika" prefHeight="25.0" prefWidth="177.0" text="Dodaj" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+             <Tab text="Korespondencja">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="927.0">
+                     <children>
+                        <TabPane layoutX="-1.0" layoutY="-6.0" prefHeight="498.0" prefWidth="1047.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Od użytkowników">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="460.0" prefWidth="924.0">
+                                       <children>
+                                          <TableView fx:id="TableWiadomosci" editable="true" fixedCellSize="50.0" prefHeight="461.0" prefWidth="835.0">
+                                            <columns>
+                                              <TableColumn fx:id="ColumnIDWiadomosci" prefWidth="42.0" text="ID" />
+                                              <TableColumn fx:id="ColumnAutorW" prefWidth="169.0" text="Autor" />
+                                                <TableColumn fx:id="ColumnTrescW" minWidth="0.0" prefWidth="509.0" text="Tresc" />
+                                                <TableColumn fx:id="ColumnZwrotW" prefWidth="114.0" text="Zwrot" />                             
+                                            </columns>
+                                          </TableView>
+                                          <Button fx:id="BTNodpowiedz" layoutX="856.0" layoutY="158.0" mnemonicParsing="false" onAction="#Odpowiedznawiadomosc" prefHeight="25.0" prefWidth="177.0" text="Odpowiedz" />
+                                          <Button fx:id="UsunWBTN" layoutX="858.0" layoutY="190.0" mnemonicParsing="false" onAction="#UsunWiadomosc" prefHeight="25.0" prefWidth="177.0" text="Usun" />
+                                          <Button fx:id="WyswietlWBTN" layoutX="858.0" layoutY="114.0" mnemonicParsing="false" onAction="#WyswietlWiadomosci" prefHeight="25.0" prefWidth="177.0" text="Wyswietl" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Do użytkowników">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="TableWiadomosciWych" editable="true" fixedCellSize="50.0" prefHeight="461.0" prefWidth="835.0">
+                                             <columns>
+                                                <TableColumn fx:id="ColumnIDWiadomosciW" prefWidth="42.0" text="ID" />
+                                                <TableColumn fx:id="ColumnAutorWW" prefWidth="115.0" text="Autor" />
+                                                <TableColumn fx:id="ColumnAdresatWW" prefWidth="115.0" text="Adresat" />
+                                                <TableColumn fx:id="ColumnTrescWW" minWidth="0.0" prefWidth="434.0" text="Tresc" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="WyswietlWWBTN" layoutX="856.0" layoutY="142.0" mnemonicParsing="false" onAction="#WyswietlWiadomosciWychodzace" prefHeight="25.0" prefWidth="177.0" text="Wyswietl" />
+                                          <Button fx:id="UsunWBTN1" layoutX="856.0" layoutY="181.0" mnemonicParsing="false" onAction="#UsunWiadomoscWychodzaca" prefHeight="25.0" prefWidth="177.0" text="Usun" />
+                                          <Button fx:id="CreateMessageBTN" layoutX="856.0" layoutY="218.0" mnemonicParsing="false" onAction="#doTworzeniaWiadomosci" prefHeight="25.0" prefWidth="177.0" text="Napisz Wiadomość" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Druzyny">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="383.0" prefWidth="777.0">
+                     <children>
+                        <TableView fx:id="tableTeams" prefHeight="482.0" prefWidth="835.0">
+                           <columns>
+                              <TableColumn fx:id="columnIDDruzyny" prefWidth="57.0" text="IDDruzyny" />
+                              <TableColumn fx:id="columnNazwaD" prefWidth="207.0" text="Nazwa" />
+                              <TableColumn fx:id="columnRokZalozenia" text="RokZalozenia" />
+                              <TableColumn fx:id="columnMiastoD" prefWidth="180.0" text="Miasto" />
+                              <TableColumn fx:id="columnIDStadionu" prefWidth="131.0" text="Obiekt" />
+                              <TableColumn fx:id="columnIDLigiD" prefWidth="176.0" text="Ligi" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="WyswietlDrButton" layoutX="854.0" layoutY="164.0" mnemonicParsing="false" onAction="#WyswietlDruzyny" prefHeight="25.0" prefWidth="181.0" text="Wyswietl" />
+                        <ChoiceBox fx:id="teamChoice" layoutX="857.0" layoutY="108.0" prefHeight="25.0" prefWidth="175.0" />
+                        <Button fx:id="editTeamBTN" layoutX="856.0" layoutY="59.0" mnemonicParsing="false" onAction="#EditTeam" prefHeight="25.0" prefWidth="177.0" text="Edycja" />
+                        <Button fx:id="DodajDButton1" layoutX="854.0" layoutY="229.0" mnemonicParsing="false" onAction="#DoDodawaniaDruzyny" prefHeight="25.0" prefWidth="181.0" text="Dodaj" />
+                        <Button fx:id="UsunDruzyneBTN" layoutX="854.0" layoutY="277.0" mnemonicParsing="false" onAction="#UsunDruzyne" prefHeight="25.0" prefWidth="182.0" text="Usun" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Zawodnicy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablePlayers" prefHeight="482.0" prefWidth="835.0">
+                           <columns>
+                              <TableColumn fx:id="columnIDzaw" prefWidth="40.0" text="ID" />
+                              <TableColumn fx:id="columnImie" prefWidth="145.0" text="Imie" />
+                              <TableColumn fx:id="columnNazwisko" prefWidth="145.0" text="Nazwisko" />
+                              <TableColumn fx:id="columnDataur" prefWidth="123.0" text="DataUr" />
+                              <TableColumn fx:id="columnWaga" prefWidth="43.0" text="Waga" />
+                              <TableColumn fx:id="columnWzrost" prefWidth="54.0" text="Wzrost" />
+                              <TableColumn fx:id="columnPozycja" prefWidth="106.0" text="Pozycja" />
+                              <TableColumn fx:id="columnDruzyna" prefWidth="178.0" text="Druzyna" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="WyswietlZawodnikow" layoutX="850.0" layoutY="139.0" mnemonicParsing="false" onAction="#WyswietlZaw" prefHeight="25.0" prefWidth="182.0" text="Wyswietl" />
+                        <ChoiceBox fx:id="teamChoice2" layoutX="850.0" layoutY="103.0" prefHeight="25.0" prefWidth="182.0" />
+                        <Button fx:id="editPlayerBTN" layoutX="849.0" layoutY="63.0" mnemonicParsing="false" onAction="#doEdycjizawodnika" prefHeight="25.0" prefWidth="184.0" text="Edycja" />
+                        <Button fx:id="BTNaddplayer" layoutX="851.0" layoutY="174.0" mnemonicParsing="false" onAction="#DoDodawaniaZawodnika" prefHeight="25.0" prefWidth="181.0" text="Dodaj" />
+                        <Button fx:id="UsunZawpdmolaButton" layoutX="850.0" layoutY="216.0" mnemonicParsing="false" onAction="#UsunZawodnika" prefHeight="25.0" prefWidth="182.0" text="Usun" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Obiekty">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableObjects" prefHeight="482.0" prefWidth="835.0">
+                           <columns>
+                              <TableColumn fx:id="columnIDstad" prefWidth="74.0" text="IDobiektu" />
+                              <TableColumn fx:id="columnNazwaS" prefWidth="404.0" text="NazwaObiektu" />
+                              <TableColumn fx:id="columnMiastoS" prefWidth="147.0" text="Miasto" />
+                              <TableColumn fx:id="columnRokBudS" prefWidth="97.0" text="RokBudowy" />
+                              <TableColumn fx:id="columnPojemnoscS" prefWidth="110.0" text="Pojemność" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="WyswietlStButton" layoutX="851.0" layoutY="151.0" mnemonicParsing="false" onAction="#WyswietlObiekty" prefHeight="25.0" prefWidth="182.0" text="Wyswietl" />
+                        <Button fx:id="EdytujStButton" layoutX="850.0" layoutY="186.0" mnemonicParsing="false" onAction="#doEdycjiObiektu" prefHeight="25.0" prefWidth="184.0" text="Edycja" />
+                        <Button fx:id="DodajStButton" layoutX="852.0" layoutY="229.0" mnemonicParsing="false" onAction="#DoDodawaniaObiektu" prefHeight="25.0" prefWidth="181.0" text="Dodaj" />
+                        <Button fx:id="UsunObiektButton" layoutX="851.0" layoutY="277.0" mnemonicParsing="false" onAction="#UsunObiekt" prefHeight="25.0" prefWidth="182.0" text="Usun" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Ligi">
+              <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="476.0" prefWidth="915.0">
+               <children>
+               <TableView fx:id="tableLeagues" prefHeight="482.0" prefWidth="835.0">
+                           <columns>
+                              <TableColumn fx:id="columnIDLigi" prefWidth="38.0" text="IDLigi" />
+                              <TableColumn fx:id="columnNazwaL" prefWidth="148.0" text="NazwaLigi" />
+                              <TableColumn fx:id="columnObszarL" prefWidth="164.0" text="Obszar" />
+                              <TableColumn fx:id="columnPoziomL" prefWidth="78.0" text="Poziom" />
+                              <TableColumn fx:id="columnMaxD" prefWidth="65.0" text="MaksymalnaLiczbaDruzyn" />
+                              <TableColumn fx:id="columnRokRoz" prefWidth="94.0" text="RokRozpoczecia" />
+                              <TableColumn fx:id="columnRokZak" prefWidth="98.0" text="RokZakonczenia" />
+                              <TableColumn fx:id="columnDyscyplina" prefWidth="149.0" text="Dyscyplina" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="WyswietlLButton" layoutX="851.0" layoutY="153.0" mnemonicParsing="false" onAction="#WyswietlLigi" prefHeight="25.0" prefWidth="182.0" text="Wyswietl" />
+                        <Button fx:id="EdytujLButton" layoutX="850.0" layoutY="188.0" mnemonicParsing="false" onAction="#doEdycjiLigi" prefHeight="25.0" prefWidth="184.0" text="Edycja" />
+                        <Button fx:id="DodajLButton" layoutX="852.0" layoutY="222.0" mnemonicParsing="false" onAction="#DoDodawaniaLigi" prefHeight="25.0" prefWidth="181.0" text="Dodaj" />
+                        <Button fx:id="UsunLButton" layoutX="852.0" layoutY="252.0" mnemonicParsing="false" onAction="#UsunLige" prefHeight="25.0" prefWidth="181.0" text="Usuń" />
+                        <ChoiceBox fx:id="LigiSportyCB" layoutX="852.0" layoutY="111.0" prefHeight="25.0" prefWidth="182.0" />
+                     
+               </children>
+               </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Zgłoszenia">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="927.0">
+                     <children>
+                        <TabPane layoutX="-1.0" layoutY="-6.0" prefHeight="562.0" prefWidth="1047.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab text="Zgłoszenia Zawodników">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="TableZgloszeniaZawodnikow" editable="true" prefHeight="461.0" prefWidth="835.0">
+                                             <columns>
+                                                <TableColumn fx:id="ColIDZgloszeniaZaw" prefWidth="33.0" text="ID" />
+                                                <TableColumn fx:id="ColImieZglZaw" prefWidth="104.0" text="Imie" />
+                                                <TableColumn fx:id="ColNazwZglZaw" prefWidth="118.0" text="Nazwisko" />
+                                                <TableColumn fx:id="ColDataUrZglZaw" minWidth="0.0" prefWidth="98.0" text="DataUrodzenia" />
+                                                <TableColumn fx:id="ColWagaZglZaw" prefWidth="53.0" text="Waga" />
+                                                <TableColumn fx:id="ColWzrZglZaw" prefWidth="61.0" text="Wzrost" />
+                                                <TableColumn fx:id="ColPozZglZaw" prefWidth="101.0" text="Pozycja" />
+                                                <TableColumn fx:id="ColDrZglZaw" prefWidth="138.0" text="Druzyna" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="WyswietlZgloszeniaZawBTN" layoutX="848.0" layoutY="147.0" mnemonicParsing="false" onAction="#WyswietlZgloszeniaZawodnikow" prefHeight="25.0" prefWidth="177.0" text="Wyświetl" />
+                                          <Button fx:id="BTNOdrzZglZaw" layoutX="848.0" layoutY="226.0" mnemonicParsing="false" onAction="#OdrzucZgloszenieZawodnika" prefHeight="25.0" prefWidth="177.0" text="Odrzuć Zgłoszenie" />
+                                          <Button fx:id="BTNPrzyZglZaw" layoutX="848.0" layoutY="185.0" mnemonicParsing="false" onAction="#PrzyjmijZgloszenieZawodnika" prefHeight="25.0" prefWidth="177.0" text="Przyjmij Zgłoszenie" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Zgłoszenia drużyn">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="TableZgloszeniaDruzyn" editable="true" prefHeight="461.0" prefWidth="835.0">
+                                             <columns>
+                                                <TableColumn fx:id="ColIDZgloszeniaDr" prefWidth="35.0" text="ID" />
+                                                <TableColumn fx:id="ColNazwaZglDruzyny" prefWidth="159.0" text="Nazwa" />
+                                                <TableColumn fx:id="ColRokZalZglDruzyny" minWidth="0.0" prefWidth="73.0" text="RokZalozenia" />
+                                                <TableColumn fx:id="ColMiastoZglDruzyny" prefWidth="127.0" text="Miasto" />
+                                                <TableColumn fx:id="ColObiektZglDruzyny" prefWidth="141.0" text="Obiekt" />
+                                                <TableColumn fx:id="ColLigaZglDruzyny" prefWidth="171.0" text="Liga" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="BTNWyswietlZglDr" layoutX="849.0" layoutY="148.0" mnemonicParsing="false" onAction="#WyswietlZgloszeniaDruzyn" prefHeight="25.0" prefWidth="177.0" text="Wyswietl" />
+                                          <Button fx:id="BTNPrzyjmijZglDr" layoutX="849.0" layoutY="180.0" mnemonicParsing="false" onAction="#PrzyjmijZgloszenieDruzyny" prefHeight="25.0" prefWidth="177.0" text="Przyjmij Zgłoszenie" />
+                                          <Button fx:id="BTNOdrzZglDr" layoutX="849.0" layoutY="218.0" mnemonicParsing="false" onAction="#OdrzucZgloszenieDruzyny" prefHeight="25.0" prefWidth="177.0" text="Odrzuć Zgłoszenie" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="Loginlbl" layoutX="14.0" layoutY="528.0" prefHeight="51.0" prefWidth="149.0" text="Label" />
+   </children>
+</Pane>

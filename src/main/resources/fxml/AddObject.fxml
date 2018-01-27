@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerAddObject">
+   <children>
+      <Button fx:id="dodajS" layoutX="126.0" layoutY="371.0" mnemonicParsing="false" onAction="#DodajObiekt" text="Dodaj" />
+      <TextField fx:id="ADDNazwaS" layoutX="126.0" layoutY="93.0" promptText="Nazwa Obiektu" />
+      <TextField fx:id="ADDMiastoS" layoutX="126.0" layoutY="127.0" promptText="Miasto" />
+      <TextField fx:id="ADDRokBudowyS" layoutX="126.0" layoutY="170.0" promptText="Rok Wybudowania" />
+      <TextField fx:id="AddPojemnoscS" layoutX="125.0" layoutY="209.0" promptText="Pojemnosc" />
+      <Button fx:id="powrot" layoutX="199.0" layoutY="371.0" mnemonicParsing="false" onAction="#Powrót" text="Wróć" />
+      <Label layoutX="121.0" layoutY="36.0" text="Panel dodawania obiektów" />
+      <TextField fx:id="TFAdres" layoutX="125.0" layoutY="251.0" promptText="Adres" />
+      <Button fx:id="CheckBTN" layoutX="284.0" layoutY="251.0" mnemonicParsing="false" onAction="#CheckAdress" text="Sprawdz" />
+      <TextField fx:id="latTF" editable="false" layoutX="126.0" layoutY="287.0" visible="false" />
+      <TextField fx:id="lngTF" editable="false" layoutX="126.0" layoutY="312.0" visible="false" />
+      <Label layoutX="21.0" layoutY="96.0" text="Nazwa Obiektu *">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="173.0" text="Rok budowy">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="212.0" text="Pojemnosc&#10;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="SzerokoscADDlbl" layoutX="22.0" layoutY="290.0" text="Szerokosc " visible="false" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="130.0" text="Miasto">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="DlugoscADDlbl" layoutX="22.0" layoutY="327.0" text="Długosć" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="420.0" text="Parametry oznaczone gwiazdką * są obowiązkowe!" />
+      <Label layoutX="20.0" layoutY="254.0" text="Adres">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
