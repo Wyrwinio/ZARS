@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerMessage">
+   <children>
+      <Label layoutX="108.0" layoutY="35.0" text="Wiadomość od użytkownika" />
+      <Label fx:id="nazwauzytkownikawiadomosci" layoutX="309.0" layoutY="35.0" />
+      <Label fx:id="iduzytkownikawiadomosci" layoutX="431.0" layoutY="35.0" prefHeight="17.0" prefWidth="84.0" />
+      <Label fx:id="idwiadomosci" layoutX="33.0" layoutY="35.0" />
+      <TextArea fx:id="TATrescWiadomosci" editable="false" layoutX="25.0" layoutY="70.0" prefHeight="130.0" prefWidth="551.0">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="TAOdpowiedz" layoutX="25.0" layoutY="256.0" prefHeight="130.0" prefWidth="551.0" promptText="Tutaj wpisz treść wiadomosci zwrotnej" />
+      <Button fx:id="WyslijOdpowiedzBTN" layoutX="257.0" layoutY="219.0" mnemonicParsing="false" onAction="#WyslijOdpowiedz" text="Odpowiedz" />
+   </children>
+</Pane>

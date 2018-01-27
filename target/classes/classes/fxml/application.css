@@ -1,0 +1,9 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#StrzelcyGospLV .list-cell {
+    -fx-alignment: top-right;    
+    
+}
+/* #StrzelcyGospLV .list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: white;
+}*/

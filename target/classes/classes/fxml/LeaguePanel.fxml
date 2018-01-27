@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="866.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerLeaguePanel">
+   <children>
+      <Label layoutX="14.0" prefHeight="59.0" prefWidth="262.0" text="PANEL LIGOWY">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="SpisDruzyn" layoutX="805.0" layoutY="109.0" prefHeight="285.0" prefWidth="273.0">
+        <columns>
+          <TableColumn fx:id="SpisNazwa" prefWidth="272.0" text="Nazwa" />
+        </columns>
+      </TableView>
+      <Label fx:id="idligi" layoutX="1031.0" layoutY="5.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button fx:id="GenerujTerminarz" layoutX="14.0" layoutY="421.0" mnemonicParsing="false" onAction="#GenerujT" text="Generuj Terminarz" />
+      <TableView fx:id="Kolejki" layoutX="14.0" layoutY="109.0" prefHeight="285.0" prefWidth="729.0">
+        <columns>
+            <TableColumn fx:id="numerkolColumn" prefWidth="45.0" text="Kolejka" />
+            <TableColumn fx:id="TerminMeczuColumn" prefWidth="96.0" text="Termin" />
+            <TableColumn fx:id="GodzinaColumn" prefWidth="70.0" text="Godzina" />
+          <TableColumn fx:id="Druzyna1Column" prefWidth="183.0" text="Gospodarze" />
+            <TableColumn fx:id="GoleGospColumn" prefWidth="79.0" text="Bramki" />
+          <TableColumn fx:id="Druzyna2Column" prefWidth="186.0" text="Goscie" />
+            <TableColumn fx:id="GoleGoscColumn" prefWidth="72.0" text="Bramki" />
+        </columns>
+      </TableView>
+      <Button fx:id="ZapiszTerminarzBTN" layoutX="14.0" layoutY="447.0" mnemonicParsing="false" onAction="#ZapisTerminarza" prefHeight="25.0" prefWidth="113.0" text="Zapisz Terminarz" visible="false" />
+      <TableView fx:id="TabelaLigowa" layoutX="457.0" layoutY="537.0" prefHeight="315.0" prefWidth="620.0">
+        <columns>
+            <TableColumn fx:id="TabelaLigowaPoz" prefWidth="40.0" text="Poz" />
+          <TableColumn fx:id="TabelaLigowaDr" prefWidth="224.0" text="Druzyna" />
+            <TableColumn fx:id="TabelaLigowaMecze" prefWidth="41.0" text="mecze" />
+            <TableColumn fx:id="TabelaLigowaBrZd" prefWidth="87.0" text="BrZd" />
+            <TableColumn fx:id="TabelaLigowaBrSt" prefWidth="87.0" text="BrSt" />
+            <TableColumn fx:id="TabelaLigowaPunkty" prefWidth="63.0" text="Pkt" />
+        </columns>
+      </TableView>
+      <TableView fx:id="StrzelcyTable" layoutY="537.0" prefHeight="315.0" prefWidth="443.0">
+        <columns>
+          <TableColumn fx:id="StrzelcyDane" prefWidth="205.0" text="Imie i nazwisko" />
+            <TableColumn fx:id="StrzelcyTeam" prefWidth="133.0" text="Klub" />
+          <TableColumn fx:id="StrzelcyGole" prefWidth="86.0" text="Gole" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="radiobutton1" layoutX="172.0" layoutY="433.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="203.0" text="Ręczny(Domyślnie puste terminy)">
+         <toggleGroup>
+            <ToggleGroup fx:id="ToggleGroup1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Radiobutton2" layoutX="172.0" layoutY="471.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="203.0" selected="true" text="Automatyczny (Od wybranej daty, co określoną ilość dni)" toggleGroup="$ToggleGroup1" wrapText="true" />
+      <Label fx:id="labeltekst3" layoutX="529.0" layoutY="400.0" prefHeight="25.0" prefWidth="157.0" text="Odstęp między meczami">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeltekst2" alignment="CENTER" layoutX="400.0" layoutY="400.0" prefHeight="25.0" prefWidth="113.0" text="Data początkowa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeltekst1" alignment="CENTER" layoutX="172.0" layoutY="411.0" prefHeight="20.0" prefWidth="203.0" text="Dobór terminów meczów" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="lbldyscyplina" layoutX="1031.0" layoutY="34.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <JFXTimePicker fx:id="timepicker" layoutX="400.0" layoutY="476.0" prefHeight="25.0" prefWidth="113.0" />
+      <JFXDatePicker fx:id="datepicker" layoutX="400.0" layoutY="422.0" prefHeight="25.0" prefWidth="113.0" />
+      <JFXTextField fx:id="OdstepMiedzyMeczamiTF" layoutX="545.0" layoutY="422.0" prefHeight="25.0" prefWidth="113.0" />
+      <Label fx:id="NazwaLigiLBL" layoutX="280.0" prefHeight="59.0" prefWidth="600.0" text="Nazwa Ligi" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="897.0" layoutY="5.0" prefHeight="20.0" prefWidth="114.0" text="Identyfikator : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="897.0" layoutY="34.0" prefHeight="20.0" prefWidth="114.0" text="Dyscyplina: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="82.0" prefHeight="27.0" prefWidth="729.0" text="Terminarz Rozgrywek">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="805.0" layoutY="82.0" prefHeight="27.0" prefWidth="273.0" text="Uczestnicy">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="461.0" layoutY="510.0" prefHeight="27.0" prefWidth="620.0" text="Aktualna Tabela">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="510.0" prefHeight="27.0" prefWidth="443.0" text="Najlepsi Zawodnicy">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

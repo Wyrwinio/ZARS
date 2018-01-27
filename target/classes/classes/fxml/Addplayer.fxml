@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ControllerAddPlayer">
+   <children>
+      <Button fx:id="dodaj" layoutX="176.0" layoutY="359.0" mnemonicParsing="false" onAction="#DodajZawodnika" text="Dodaj" />
+      <TextField fx:id="ADDname" layoutX="150.0" layoutY="95.0" promptText="Imię" />
+      <TextField fx:id="ADDsurname" layoutX="150.0" layoutY="129.0" promptText="Nazwisko" />
+      <TextField fx:id="ADDwaga" layoutX="149.0" layoutY="198.0" promptText="Waga" />
+      <TextField fx:id="ADDwzrost" layoutX="149.0" layoutY="241.0" promptText="Wzrost" />
+      <Button fx:id="powrot" layoutX="178.0" layoutY="384.0" mnemonicParsing="false" onAction="#Powrót" text="Wróć" />
+      <Label layoutX="121.0" layoutY="36.0" text="Panel dodawania zawodników" />
+      <TextField fx:id="ADDpozycja" layoutX="150.0" layoutY="282.0" promptText="Pozycja" />
+      <ChoiceBox fx:id="ADDdruzyny" layoutX="148.0" layoutY="318.0" prefWidth="150.0" />
+      <DatePicker fx:id="ADDdataur" layoutX="150.0" layoutY="165.0" onAction="#ShowDate" prefHeight="25.0" prefWidth="149.0" promptText="Data urodzenia" />
+      <Label layoutX="32.0" layoutY="96.0" text="Imie *">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="130.0" text="Nazwisko *">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="166.0" text="Data Urodzenia *">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="199.0" text="Waga">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="242.0" text="Wzrost">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="283.0" text="Pozycja">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="319.0" text="Druzyna">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="420.0" text="Parametry oznaczone gwiazdką * są obowiązkowe!" />
+   </children>
+</Pane>
